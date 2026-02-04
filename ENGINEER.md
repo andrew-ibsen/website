@@ -22,17 +22,17 @@ Type ratings (level 3 training), B1/B2, EASA and UK CAA Licenses;
 - Boeing 787-8/9/10 GENx 
 
 CRS approval with;
-Aer Lingus
-Aer Lingus UK
-Air New Zealand
-All Nippon Airlines
-British Airways
-Finnair
-Iberia
-Japan Airlines 
-Norse Atlantic
-Norse Atlantic UK
-Qantas
+- Aer Lingus
+- Aer Lingus UK
+- Air New Zealand
+- All Nippon Airlines
+- British Airways
+- Finnair
+- Iberia
+- Japan Airlines 
+- Norse Atlantic
+- Norse Atlantic UK
+- Qantas
 
 ## Hands‑On Engineering Experience
 
