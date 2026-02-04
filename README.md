@@ -1,6 +1,6 @@
 # Andrew Ibsen | Aviation Operations Leader & Transformation Architect
 
-<img BA B787.jpg/>
+<![British Airways 787](./BA%20B787.jpg)>
 
 ## Introduction
 
