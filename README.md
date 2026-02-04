@@ -1,5 +1,4 @@
-# Andrew Ibsen | Aviation Operations Leader & Transformation Architect
-
+# Andrew Ibsen | Aviation Maintenance Leader
 ![British Airways 787](./BA%20B787.jpg)
 
 ## Introduction
