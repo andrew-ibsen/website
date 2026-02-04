@@ -1,11 +1,11 @@
-# Andrew | Tech & Transformation
+# Andrew Ibsen | Digital Transformation & Strategy
 
 *Digital innovation driving measurable impact.*
 
 ## Major Digital Projects
 
 ### Emero Pro Global Rollout
-- **Scale:** 2,000+ users worldwide
+- **Scale:** 200+ users worldwide
 - **Impact:** 30% revenue increase within 6 months
 - **Role:** Led global implementation, training 500+ staff across all stations and managing change adoption.
 - **Technologies:** Emero Pro digital maintenance software, Power BI dashboards
@@ -47,7 +47,7 @@
 
 | Metric | Value |
 |-------|------|
-| Users on Emero Pro | 2,000+ |
+| Users on Emero Pro | 200+ |
 | Users on Storekeeper App | 200+ |
 | Airlines using custom solutions | 5 |
 | Revenue increase from digital enablement | 30% |
