@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andrew | Publications</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <img src="assets/hero.png" alt="Hero background">
+    <div class="hero-overlay">
+      <h1>Andrew | Publications</h1>
+      <p>Thought Leadership & Research</p>
+    </div>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="engineer.html">Engineer</a></li>
+      <li><a href="tech-transformation.html">Tech/Transformation</a></li>
+      <li><a href="business.html">Business</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="publications.html">Publications</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section>
+      <h2>Featured Publications</h2>
+      <p>Andrew writes about the future of aviation technology, digital transformation, and sustainability. Click on a card to read more.</p>
+      <div class="cards">
+        <div class="card">
+          <h3>Unlocking the Future of Aircraft Maintenance with Technology</h3>
+          <p>An exploration of how emerging technologies like blockchain and data analytics are reshaping aircraft maintenance.</p>
+          <button onclick="openModal('pub1')">Read More</button>
+        </div>
+        <div class="card">
+          <h3>Bridging the Digital Gap in Aviation Sustainability</h3>
+          <p>Connecting digital innovation with environmental performance and ESG priorities in aviation.</p>
+          <button onclick="openModal('pub2')">Read More</button>
+        </div>
+        <div class="card">
+          <h3>MSc Thesis: Tokenizing Aircraft Assets on a Distributed Ledger</h3>
+          <p>A research project validating accuracy and cycle‑time improvements through blockchain asset tokenization.</p>
+          <button onclick="openModal('pub3')">Read More</button>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>Upcoming Articles</h2>
+      <p>Stay tuned for future articles on data‑driven decision making, process optimization, ESG metrics, and lessons learned from large‑scale digital projects.</p>
+    </section>
+  </main>
+  <footer>
+    <p>© 2026 Andrew Ibsen</p>
+  </footer>
+  <!-- Modals for publications -->
+  <div class="modal" id="modalPub1">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('pub1')">&times;</span>
+      <h3>Unlocking the Future of Aircraft Maintenance with Technology</h3>
+      <p><em>Read Time: 5 minutes</em></p>
+      <p>This article examines the transformative role of emerging technologies in aircraft maintenance. Andrew discusses blockchain integration for asset tracking, data analytics for predictive maintenance, and the operational benefits of digitizing maintenance processes. Key themes include digital maintenance platforms, tamper‑proof asset histories, data‑driven decision making, and future trends in aviation technology.</p>
+    </div>
+  </div>
+  <div class="modal" id="modalPub2">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('pub2')">&times;</span>
+      <h3>Bridging the Digital Gap in Aviation Sustainability</h3>
+      <p><em>Read Time: 6 minutes</em></p>
+      <p>In this article, Andrew explores the intersection of digital transformation and sustainability, detailing how digital tools enable emissions tracking, environmental performance reporting, and efficiency gains that reduce carbon footprints. Themes include ESG in aviation, data analytics for carbon reduction, digital solutions linking operational efficiency and environmental impact, and strategies for aligning sustainability goals with operational priorities.</p>
+    </div>
+  </div>
+  <div class="modal" id="modalPub3">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('pub3')">&times;</span>
+      <h3>MSc Thesis: Tokenizing Aircraft Assets on a Distributed Ledger</h3>
+      <p><em>Read Time: 8 minutes</em></p>
+      <p>Andrew's thesis investigates the feasibility of tokenizing aircraft assets using blockchain technology. The research validates accuracy improvements and cycle‑time reductions in asset tracking, offering a proof‑of‑concept for distributed ledger applications in aviation asset management. Key takeaways include enhanced transparency, granular ownership management, and improved compliance through tamper‑proof records.</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

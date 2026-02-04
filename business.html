@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andrew | Business</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <img src="assets/hero.png" alt="Hero background">
+    <div class="hero-overlay">
+      <h1>Andrew | Business</h1>
+      <p>Commercial Acumen & Asset Management</p>
+    </div>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="engineer.html">Engineer</a></li>
+      <li><a href="tech-transformation.html">Tech/Transformation</a></li>
+      <li><a href="business.html">Business</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="publications.html">Publications</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section>
+      <h2>Commercial Scale & Asset Management</h2>
+      <p>Andrew manages substantial commercial operations, overseeing $2M in assets and generating $3.5M in annual revenue across multi‑airline maintenance contracts. He expertly navigates the complete contract lifecycle, assembles complex agreements, and safeguards revenue through standardized billing and automated tracking.</p>
+    </section>
+    <section id="business-metrics">
+      <h2>Business Metrics</h2>
+      <div class="metrics">
+        <div class="metric"><span class="counter" data-target="2000000">$0</span><p>Assets under management</p></div>
+        <div class="metric"><span class="counter" data-target="3500000">$0</span><p>Annual revenue managed</p></div>
+        <div class="metric"><span class="counter" data-target="5">0+</span><p>Concurrent airline contracts</p></div>
+        <div class="metric"><span class="counter" data-target="0">0</span><p>Audit findings</p></div>
+      </div>
+    </section>
+    <section id="business-chart">
+      <h2>Revenue & Asset Comparison</h2>
+      <p>This bar chart compares annual revenue managed versus assets under management.</p>
+      <canvas id="businessChart"></canvas>
+    </section>
+    <section>
+      <h2>Commercial Expertise</h2>
+      <ul>
+        <li><strong>Contract Lifecycle Management:</strong> From MOU to LOI and beyond, assembling and negotiating multi‑party agreements.</li>
+        <li><strong>Revenue Protection:</strong> Standardized billing processes and automated workflows safeguarding $3.5M in third‑party revenue.</li>
+        <li><strong>Deal Brokering & Negotiation:</strong> Vendor and third‑party contract management across USA, UK, Iceland, and Switzerland.</li>
+        <li><strong>Aviation‑Adjacent Operations:</strong> In‑flight sales programs, onboard commercial operations, and cost modeling.</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>© 2026 Andrew Ibsen</p>
+  </footer>
+  <script src="script.js"></script>
+  <script>
+    // Draw business chart comparing revenue and assets
+    document.addEventListener('DOMContentLoaded', () => {
+      const canvas = document.getElementById('businessChart');
+      if (canvas) {
+        canvas.width = canvas.offsetWidth;
+        canvas.height = 300;
+        const labels = ['Assets','Revenue'];
+        const values = [2.0, 3.5];
+        const colors = ['#0078D4','#FFB900'];
+        drawBarChart('businessChart', labels, values, colors);
+      }
+    });
+  </script>
+</body>
+</html>

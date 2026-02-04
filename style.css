@@ -1,0 +1,303 @@
+:root {
+  --primary: #003087;
+  --secondary: #C0C0C0;
+  --accent1: #0078D4;
+  --accent2: #107C10;
+  --accent3: #FFB900;
+  --text-light: #ffffff;
+  --text-dark: #333333;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: var(--text-dark);
+  background: #f9f9f9;
+}
+
+a {
+  color: var(--accent1);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav {
+  background: var(--primary);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  flex: 1;
+  text-align: center;
+}
+
+nav a {
+  display: block;
+  padding: 12px;
+  color: var(--text-light);
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background: var(--accent1);
+}
+
+.hero {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-light);
+  text-align: center;
+}
+
+.hero-overlay h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.hero-overlay p {
+  font-size: 1.2em;
+  margin-top: 8px;
+}
+
+main section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+main h2 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+.metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.metric {
+  flex: 1 1 150px;
+  background: var(--secondary);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.metric span {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.map-container img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+.marker {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: var(--accent2);
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.tooltip {
+  position: absolute;
+  background: var(--primary);
+  color: var(--text-light);
+  padding: 10px;
+  border-radius: 8px;
+  display: none;
+  z-index: 10;
+  max-width: 240px;
+  pointer-events: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+#revenueChart {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  margin: 20px auto;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  flex: 1 1 250px;
+  background: var(--secondary);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+.card button {
+  margin-top: 10px;
+  background: var(--accent1);
+  color: var(--text-light);
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.card button:hover {
+  background: var(--accent3);
+}
+
+footer {
+  background: var(--primary);
+  color: var(--text-light);
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9em;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal-content {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* Specific styles for aircraft diagram */
+.aircraft-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.aircraft-container img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Project cards page */
+.project {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: var(--secondary);
+}
+.project-toggle {
+  width: 100%;
+  background: var(--primary);
+  color: var(--text-light);
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1em;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  text-align: left;
+}
+.project-toggle:hover {
+  background: var(--accent1);
+}
+.project-details {
+  display: none;
+  padding: 15px 20px;
+}
+
+@media (max-width: 768px) {
+  .metrics {
+    flex-direction: column;
+  }
+  .cards {
+    flex-direction: column;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  nav li {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+}
