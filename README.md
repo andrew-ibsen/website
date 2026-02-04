@@ -11,7 +11,7 @@ Andrew Ibsen is an aviation operations leader and transformation architect with 
 ### 📊 Quick Impact Metrics
 
 - **$3.5M** annual revenue managed
-- **2,000+** users on digital solutions deployed
+- **300+** users on digital solutions deployed
 - **$2M** under asset management
 - **30%** revenue increase from transformation initiatives
 - **500%** efficiency gains delivered
@@ -21,9 +21,9 @@ Andrew Ibsen is an aviation operations leader and transformation architect with 
 
 Andrew wears multiple hats. Explore the persona that matters to you:
 
-- [**ANDREW | ENGINEER**](ENGINEER.md) – Technical credentials, licenses, aircraft type ratings, hands‑on engineering experience, and regulatory compliance.
-- [**ANDREW | TECH/TRANSFORMATION**](TECH-TRANSFORMATION.md) – Digital innovation, custom app development, analytics, and global transformation initiatives.
-- [**ANDREW | BUSINESS**](BUSINESS.md) – Contract management, asset management, commercial enablement, and revenue protection.
+- [**Andrew Ibsen | Aeronautical Engineer**](ENGINEER.md) – Technical credentials, licenses, aircraft type ratings, hands‑on engineering experience, and regulatory compliance.
+- [**Andrew Ibsen | Digital Transformation & Strategy**](TECH-TRANSFORMATION.md) – Digital innovation, custom app development, analytics, and global transformation initiatives.
+- [**Andrew Ibsen | Asset Management**](BUSINESS.md) – Contract management, asset management, commercial enablement, and revenue protection.
 
 ### 📰 Featured Thought Leadership
 
