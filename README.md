@@ -1,6 +1,6 @@
 # Andrew Ibsen | Aviation Operations Leader & Transformation Architect
 
-<img src="assets/hero.png" alt="Andrew Ibsen hero image" style="width:100%; border-radius:8px;"/>
+<img https://media.licdn.com/dms/image/v2/D4E16AQH1jpLljGc_uQ/profile-displaybackgroundimage-shrink_350_1400/B4EZn82ikmIIAY-/0/1760883781321?e=1772064000&v=beta&t=xAeBm3DmBnEb0c-xhmFFtvKAZGHKfmJ3Ahp0bXsQM6s/>
 
 ## Introduction
 
