@@ -1,11 +1,11 @@
 # Andrew Ibsen | Digital Transformation & Strategy
 
-*Digital innovation driving measurable impact.*
+*Briding the gap between traditional aviation practices and modern digital capabilities.*
 
 ## Major Digital Projects
 
-### Emero Pro Global Rollout
-- **Scale:** 200+ users worldwide
+### MRO-PRO Global Rollout
+- **Scale:** 300+ users worldwide
 - **Impact:** 30% revenue increase within 6 months
 - **Role:** Led global implementation, training 500+ staff across all stations and managing change adoption.
 - **Technologies:** Emero Pro digital maintenance software, Power BI dashboards
@@ -13,7 +13,7 @@
 
 ### Storekeeper Inventory Management App
 - **Built by Andrew Ibsen** (developed single‑handedly)
-- **Scale:** 5 airlines, 200+ users
+- **Scale:** 5 airlines, 300+ users
 - **Impact:** $150K+ cost savings, reduced AOG risk, improved stock accuracy
 - **Innovation:** Blockchain integration for asset tracking and compliance
 - **Technologies:** Power Apps, SharePoint, Power Automate
@@ -47,7 +47,7 @@
 
 | Metric | Value |
 |-------|------|
-| Users on Emero Pro | 200+ |
+| Users on MRO-PRO | 200+ |
 | Users on Storekeeper App | 200+ |
 | Airlines using custom solutions | 5 |
 | Revenue increase from digital enablement | 30% |
