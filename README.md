@@ -6,7 +6,7 @@
 
 Andrew Ibsen is an aviation operations leader and transformation architect with a proven track record delivering measurable business value through digital innovation, operational excellence, and commercial acumen. With deep expertise spanning aircraft maintenance, data analytics, and strategic asset management, Andrew bridges the gap between technical operations and business strategy.
 
-> **Quick summary:** Based in New York and relocating to Geneva, Andrew currently manages BA's largest overseas line station at JFK, generating $3.5M in annual revenue. His initiatives have delivered a 30% revenue increase via digital enablement, reduced ID processing time by 500%, and saved $150K through custom‑built solutions.
+> **Quick summary:** Based in New York, Andrew currently manages BA's largest overseas line station at JFK, generating $3.5M in annual revenue. His initiatives have delivered a 30% revenue increase via digital enablement, reduced ID processing time by 500%, and saved $150K through custom‑built solutions.
 
 ### 📊 Quick Impact Metrics
 
