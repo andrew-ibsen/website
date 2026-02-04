@@ -1,4 +1,4 @@
-# Andrew | Business
+# Andrew Ibsen | Asset Management
 
 *Commercial acumen and asset management expertise.*
 
