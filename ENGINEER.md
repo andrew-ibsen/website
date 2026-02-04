@@ -1,4 +1,4 @@
-# Andrew | Engineer
+# Andrew Ibsen | Aeronautical Engineer
 
 *The technical core of Andrew's professional identity.*
 
@@ -10,17 +10,16 @@
 
 **Type Ratings:**
 
-- A330‑200/300/7000
-- B777‑200/300
-- B787‑8/9/10
-- B757
-
-**Engine Ratings:**
-
-- GE90
-- Trent 800/1000/7000
-- RB211
-- GEnx
+Type ratings (level 3 training), B1/B2, EASA and UK CAA Licenses;
+Airbus A330-200/300 GE CF6
+Airbus A330-200/300 PW 4000
+Airbus A330-200/300 RR Trent 700
+Airbus A330-800/900 RR Trent 7000
+Boeing 757-200/300 RB211
+Boeing 777-200/300 Trent 800
+Boeing 777-200/300 GE90
+Boeing 787-8/9/10 Trent 1000
+Boeing 787-8/9/10 GENx 
 
 ## Hands‑On Engineering Experience
 
@@ -28,8 +27,8 @@ Andrew has performed line and base maintenance across multiple fleets, executed 
 
 ## Regulatory Expertise
 
-- Perfect audit record across EASA, UK CAA, ANA, Air New Zealand, and Qantas frameworks with **nil findings**.
-- Authorized signatory with Port Authority NY/NJ.
+- Perfect audit record across EASA, UK CAA, ANA, Air New Zealand, JAL, ANA and Qantas frameworks with **nil findings**.
+- Authorized signatory with Port Authority NY/NJ at JFK.
 - Expertise in multi‑framework compliance spanning FAA, EASA, and UK CAA regulations.
 
 ## Safety Leadership
