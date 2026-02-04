@@ -11,19 +11,36 @@
 **Type Ratings:**
 
 Type ratings (level 3 training), B1/B2, EASA and UK CAA Licenses;
-Airbus A330-200/300 GE CF6
-Airbus A330-200/300 PW 4000
-Airbus A330-200/300 RR Trent 700
-Airbus A330-800/900 RR Trent 7000
-Boeing 757-200/300 RB211
-Boeing 777-200/300 Trent 800
-Boeing 777-200/300 GE90
-Boeing 787-8/9/10 Trent 1000
-Boeing 787-8/9/10 GENx 
+- Airbus A330-200/300 GE CF6
+- Airbus A330-200/300 PW 4000
+- Airbus A330-200/300 RR Trent 700
+- Airbus A330-800/900 RR Trent 7000
+- Boeing 757-200/300 RB211
+- Boeing 777-200/300 Trent 800
+- Boeing 777-200/300 GE90
+- Boeing 787-8/9/10 Trent 1000
+- Boeing 787-8/9/10 GENx 
+
+CRS approval with;
+Aer Lingus
+Aer Lingus UK
+Air New Zealand
+All Nippon Airlines
+British Airways
+Finnair
+Iberia
+Japan Airlines 
+Norse Atlantic
+Norse Atlantic UK
+Qantas
 
 ## Hands‑On Engineering Experience
 
 Andrew has performed line and base maintenance across multiple fleets, executed A, B, and C checks, implemented engineering orders, carried out cabin and IFE upgrades, and led time‑critical recovery operations at London Heathrow. His hands‑on approach combines technical precision with an unwavering commitment to safety and compliance.
+
+Experienced in Aviation Maintenance Management Software Solutions such as AMICOS, Maintenix, AMOS, Ultramain, and SAP.
+
+Proficient with Business Management Solutions such as Microsoft Office 365, Power Bi, Power Automate, Power Apps, Python, Solidity and G suite solutions. 
 
 ## Regulatory Expertise
 
