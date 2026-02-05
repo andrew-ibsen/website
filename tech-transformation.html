@@ -72,8 +72,47 @@
         const labels = ['MRO-PRO','Storeskeeper','BA ID','Dashboards','Workflows'];
         const values = [500, 300, 200, 100, 50];
         const colors = ['#0078D4','#107C10','#FFB900','#003087','#0078D4'];
-        drawBarChart('techChart', labels, values, colors);
-      }
+        function drawBarChart(canvasId, labels, values, colors) {
+  const canvas = document.getElementById(canvasId);
+  const ctx = canvas.getContext('2d');
+
+  const padding = 50;
+  const chartWidth = canvas.width - padding * 2;
+  const chartHeight = canvas.height - padding * 2;
+
+  const maxValue = Math.max(...values);
+
+  const barGap = 30;
+  const barWidth = (chartWidth - barGap * (values.length - 1)) / values.length;
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  values.forEach((value, index) => {
+    const barHeight = (value / maxValue) * chartHeight;
+    const x = padding + index * (barWidth + barGap);
+    const y = canvas.height - padding - barHeight;
+
+    ctx.fillStyle = colors[index];
+    ctx.fillRect(x, y, barWidth, barHeight);
+
+    ctx.fillStyle = '#000';
+    ctx.font = '12px Arial';
+    ctx.textAlign = 'center';
+
+    ctx.fillText(
+      value + 'M',
+      x + barWidth / 2,
+      y - 6
+    );
+
+    ctx.fillText(
+      labels[index],
+      x + barWidth / 2,
+      canvas.height - padding + 18
+    );
+  });
+}
+
     });
   </script>
 </body>
