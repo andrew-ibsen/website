@@ -7,18 +7,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header class="hero">
-   ">
-  <img src="Davinci_AI_Aviation.png" alt="Davinci Aviation" style="
-    width:100%;
-    height:50%;
-    object-fit:cover;
-    display:block;
-  ">
+    <img src="Davinci_AI_Aviation.png" alt="Davinci Aviation">
+    <div class="hero-overlay">
       <h1>Andrew Ibsen | Digital Transformation & Strategy</h1>
-      <p>Innovation & Data‑Driven Change</p>
+      <p>Innovation & Data-Driven Change</p>
     </div>
   </header>
+
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -30,11 +27,13 @@
       <li><a href="publications.html">Publications</a></li>
     </ul>
   </nav>
+
   <main>
     <section>
       <h2>Driving Digital Transformation</h2>
-      <p>Andrew designs and delivers innovative digital solutions that transform operations and create measurable business value. His projects span custom app development, global software rollouts, analytics dashboards, and workflow automation, all grounded in data‑driven decision making and change management best practices.</p>
+      <p>Andrew designs and delivers innovative digital solutions that transform operations and create measurable business value. His projects span custom app development, global software rollouts, analytics dashboards, and workflow automation, all grounded in data-driven decision making and change management best practices.</p>
     </section>
+
     <section id="tech-metrics">
       <h2>Transformation Metrics</h2>
       <div class="metrics">
@@ -46,79 +45,89 @@
         <div class="metric"><span class="counter" data-target="500">0%</span><p>Efficiency gain</p></div>
       </div>
     </section>
+
     <section id="tech-chart">
       <h2>Project Adoption</h2>
       <p>The chart below illustrates adoption numbers for Andrew's major digital initiatives.</p>
-      <canvas id="techChart"></canvas>
+      <canvas id="techChart" style="width:100%; max-width:900px; height:320px; display:block; margin:0 auto;"></canvas>
     </section>
+
     <section>
       <h2>Major Digital Projects</h2>
       <ul>
         <li><strong>MRO-Pro Global Rollout:</strong> 300+ users worldwide, 30% revenue increase.</li>
-        <li><strong>Storeskeeper Inventory Management App:</strong> Built single‑handedly by Andrew; blockchain integration; $150K+ cost savings.</li>
-        <li><strong>BA ID Digitization Project:</strong> 1,500+ users; 500% efficiency gain.</li>
-        <li><strong>Power BI Analytics Dashboards:</strong> Real‑time decision support for senior leadership.</li>
+        <li><strong>Storeskeeper Inventory Management App:</strong> Built single-handedly by Andrew, blockchain integration, $150K+ cost savings.</li>
+        <li><strong>BA ID Digitization Project:</strong> 1,500+ users, 500% efficiency gain.</li>
+        <li><strong>Power BI Analytics Dashboards:</strong> Real-time decision support for senior leadership.</li>
         <li><strong>Power Automate Workflow Solutions:</strong> Protects $3.5M in annual revenue through automated processes.</li>
         <li><strong>SharePoint Training & Implementation:</strong> Enhanced collaboration and data management.</li>
       </ul>
     </section>
   </main>
+
   <footer>
     <p>© 2026 Andrew Ibsen</p>
   </footer>
+
   <script src="script.js"></script>
+
   <script>
-    // Draw chart specific to the tech transformation page
+    function drawBarChart(canvasId, labels, values, colors) {
+      const canvas = document.getElementById(canvasId);
+      const ctx = canvas.getContext('2d');
+
+      const padding = 50;
+      const chartWidth = canvas.width - padding * 2;
+      const chartHeight = canvas.height - padding * 2;
+
+      const maxValue = Math.max(...values);
+
+      const barGap = 30;
+      const barWidth = (chartWidth - barGap * (values.length - 1)) / values.length;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      values.forEach((value, index) => {
+        const barHeight = (value / maxValue) * chartHeight;
+        const x = padding + index * (barWidth + barGap);
+        const y = canvas.height - padding - barHeight;
+
+        ctx.fillStyle = colors[index];
+        ctx.fillRect(x, y, barWidth, barHeight);
+
+        ctx.fillStyle = '#111';
+        ctx.font = '12px Arial';
+        ctx.textAlign = 'center';
+
+        ctx.fillText(value + 'M', x + barWidth / 2, y - 6);
+        ctx.fillText(labels[index], x + barWidth / 2, canvas.height - padding + 18);
+      });
+    }
+
+    function sizeCanvasToCSS(canvas) {
+      const cssWidth = canvas.getBoundingClientRect().width;
+      const cssHeight = canvas.getBoundingClientRect().height;
+      canvas.width = Math.round(cssWidth);
+      canvas.height = Math.round(cssHeight);
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
       const canvas = document.getElementById('techChart');
-      if (canvas) {
-        canvas.width = canvas.offsetWidth;
-        canvas.height = 300;
-        const labels = ['MRO-PRO','Storeskeeper','BA ID','Dashboards','Workflows'];
-        const values = [500, 300, 200, 100, 50];
-        const colors = ['#0078D4','#107C10','#FFB900','#003087','#0078D4'];
-        function drawBarChart(canvasId, labels, values, colors) {
-  const canvas = document.getElementById(canvasId);
-  const ctx = canvas.getContext('2d');
+      if (!canvas) return;
 
-  const padding = 50;
-  const chartWidth = canvas.width - padding * 2;
-  const chartHeight = canvas.height - padding * 2;
+      const labels = ['MRO-PRO','Storeskeeper','BA ID','Dashboards','Workflows'];
+      const values = [500, 300, 200, 100, 50];
+      const colors = ['#0078D4','#107C10','#FFB900','#003087','#0078D4'];
 
-  const maxValue = Math.max(...values);
+      sizeCanvasToCSS(canvas);
+      drawBarChart('techChart', labels, values, colors);
 
-  const barGap = 30;
-  const barWidth = (chartWidth - barGap * (values.length - 1)) / values.length;
-
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  values.forEach((value, index) => {
-    const barHeight = (value / maxValue) * chartHeight;
-    const x = padding + index * (barWidth + barGap);
-    const y = canvas.height - padding - barHeight;
-
-    ctx.fillStyle = colors[index];
-    ctx.fillRect(x, y, barWidth, barHeight);
-
-    ctx.fillStyle = '#000';
-    ctx.font = '12px Arial';
-    ctx.textAlign = 'center';
-
-    ctx.fillText(
-      value + 'M',
-      x + barWidth / 2,
-      y - 6
-    );
-
-    ctx.fillText(
-      labels[index],
-      x + barWidth / 2,
-      canvas.height - padding + 18
-    );
-  });
-}
-
+      window.addEventListener('resize', () => {
+        sizeCanvasToCSS(canvas);
+        drawBarChart('techChart', labels, values, colors);
+      });
     });
   </script>
+
 </body>
 </html>
