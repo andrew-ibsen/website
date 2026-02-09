@@ -160,6 +160,50 @@ nav a:hover {
   color: var(--muted);
 }
 
+.hero-actions {
+margin-top: 14px;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-wrap: wrap;
+}
+
+.hero-action {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+padding: 10px 14px;
+border-radius: 10px;
+color: #ffffff;
+background: rgba(255, 255, 255, 0.14);
+border: 1px solid rgba(255, 255, 255, 0.22);
+text-decoration: none;
+font-size: 14px;
+letter-spacing: 0.2px;
+line-height: 1;
+transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.hero-action:hover,
+.hero-action:focus-visible {
+background: rgba(255, 255, 255, 0.24);
+border-color: rgba(255, 255, 255, 0.38);
+transform: translateY(-1px);
+outline: none;
+}
+
+@media (max-width: 520px) {
+.hero-actions {
+flex-direction: column;
+gap: 10px;
+}
+
+.hero-action {
+width: min(260px, 85vw);
+}
+}
+
 /* Main sections */
 main section {
   padding: 42px 20px;
