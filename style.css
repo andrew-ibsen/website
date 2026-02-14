@@ -203,6 +203,10 @@ background-position: center;
 background-size: contain;
 }
 
+.hero-icelandair img {
+  object-position: center 35%;
+}
+
 /* LinkedIn */
 .hero-action.linkedin::before {
 background-image: url("data:image/svg+xml;utf8,<svg fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 24h5V7H0v17zM8 7h4.8v2.3h.07c.67-1.27 2.3-2.6 4.73-2.6C22.2 6.7 24 9.2 24 14.2V24h-5v-8.6c0-2.05-.04-4.7-2.87-4.7-2.87 0-3.31 2.24-3.31 4.56V24H8V7z'/></svg>");
