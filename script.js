@@ -39,63 +39,53 @@ function animateCounters() {
 
 // Map marker initialization
 function initMapMarkers() {
-  const mapContainer = document.querySelector('.map-container');
+  const mapContainer = document.getElementById('mapContainer');
+  const mapImg = document.getElementById('worldMap');
+  const overlay = document.getElementById('mapOverlay');
   const tooltip = document.getElementById('mapTooltip');
-  if (!mapContainer || !tooltip) return;
+  if (!mapContainer || !mapImg || !overlay || !tooltip) return;
 
   const locations = [
-    {
-      name: 'New York (JFK)',
-      description:
-        'Duty Maintenance Manager at British Airways Engineering JFK; manages largest overseas line station generating $3.5M annually.',
-      x: 0.27,
-      y: 0.38
-    },
-    {
-      name: 'London (Heathrow)',
-      description:
-        'Performance Recovery Team operations at LHR; led time-critical recovery operations.',
-      x: 0.45,
-      y: 0.30
-    },
-    {
-      name: 'Reykjavik (Iceland)',
-      description:
-        'Licensed Aircraft Engineer for Icelandair; managed line and base maintenance.',
-      x: 0.42,
-      y: 0.25
-    },
-    {
-      name: 'Geneva (Switzerland)',
-      description:
-        'Home Base; expanding global operations perspective.',
-      x: 0.47,
-      y: 0.33
-    }
+    { name: 'New York (JFK)', description: 'Duty Maintenance Manager at BA Engineering JFK.', x: 0.27, y: 0.38 },
+    { name: 'London (LHR)', description: 'Performance Recovery Team operations at LHR.', x: 0.45, y: 0.30 },
+    { name: 'Reykjavik (KEF)', description: 'Icelandair line and base maintenance.', x: 0.42, y: 0.25 },
+    { name: 'Geneva (GVA)', description: 'Home base.', x: 0.47, y: 0.33 },
+    { name: 'Florida', description: 'Family base.', x: 0.30, y: 0.48 }
   ];
 
-  locations.forEach(loc => {
-    const marker = document.createElement('div');
-    marker.className = 'marker';
-    marker.style.left = (loc.x * 100) + '%';
-    marker.style.top = (loc.y * 100) + '%';
+  function renderMarkers() {
+    overlay.innerHTML = '';
 
-    marker.addEventListener('mouseenter', () => {
-      tooltip.style.display = 'block';
-      tooltip.innerHTML = '<strong>' + loc.name + '</strong><br>' + loc.description;
+    locations.forEach(loc => {
+      const marker = document.createElement('div');
+      marker.className = 'marker';
+      marker.style.left = (loc.x * 100) + '%';
+      marker.style.top = (loc.y * 100) + '%';
 
-      const rect = mapContainer.getBoundingClientRect();
-      tooltip.style.left = (loc.x * rect.width + 20) + 'px';
-      tooltip.style.top = (loc.y * rect.height + 20) + 'px';
+      marker.addEventListener('mouseenter', () => {
+        tooltip.style.display = 'block';
+        tooltip.innerHTML = '<strong>' + loc.name + '</strong><br>' + loc.description;
+
+        const rect = overlay.getBoundingClientRect();
+        tooltip.style.left = (loc.x * rect.width + 14) + 'px';
+        tooltip.style.top = (loc.y * rect.height + 14) + 'px';
+      });
+
+      marker.addEventListener('mouseleave', () => {
+        tooltip.style.display = 'none';
+      });
+
+      overlay.appendChild(marker);
     });
+  }
 
-    marker.addEventListener('mouseleave', () => {
-      tooltip.style.display = 'none';
-    });
-
-    mapContainer.appendChild(marker);
-  });
+  if (mapImg.complete) renderMarkers();
+  mapImg.addEventListener('load', renderMarkers);
+  window.addEventListener('resize', () => tooltip.style.display = 'none');
 }
+
+document.addEventListener('DOMContentLoaded', initMapMarkers);
+
 
 // Revenue bar chart initialization
 function initRevenueChart() {
