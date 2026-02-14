@@ -2,6 +2,16 @@
 
 Andrew regularly shares insights on aviation technology, digital transformation, and sustainability.
 
+## British Airways Top Talent Program
+
+**Description:**  
+Andrew was recognized as **"Top Talent"** within British Airways' coveted Talent Program, highlighting his potential as a future leader in operations and transformation.
+
+**Significance:**  
+This recognition is awarded to a select group of professionals demonstrating exceptional performance, leadership, and innovative thinking.
+
+---
+
 ## Unlocking the Future of Aircraft Maintenance with Technology
 
 **Overview:**  
