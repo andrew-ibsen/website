@@ -1,4 +1,4 @@
-# Publications & Thought Leadership
+# Thought Leadership
 
 Andrew regularly shares insights on aviation technology, digital transformation, and sustainability.
 
