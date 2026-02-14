@@ -360,22 +360,57 @@ main p {
   color: var(--muted);
 }
 
-/* Map and aircraft image containers */
-.map-container,
-.aircraft-container {
+/* Map */
+.map-container{
   position: relative;
-  width: 100%;
-  max-width: 680px;
-  margin: 18px auto 0 auto;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
-.map-container img,
-.aircraft-container img {
+/* Make the image define the box */
+.map-container img{
+  display: block;
   width: 100%;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
+  height: auto;
 }
+
+/* Overlay sits exactly on top of the image */
+.map-overlay{
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Markers */
+.marker{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #39ffb1;
+  box-shadow: 0 0 0 4px rgba(57,255,177,0.18);
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+/* Tooltip positioned inside the map */
+.map-tooltip{
+  position: absolute;
+  display: none;
+  max-width: 260px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(10,14,22,0.95);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.35;
+  pointer-events: none;
+}
+
 
 /* Markers and tooltip */
 .marker {
