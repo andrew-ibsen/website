@@ -360,87 +360,67 @@ main p {
   color: var(--muted);
 }
 
-/* Map */
-.map-container{
-  position: relative;
-  max-width: 900px;
-  margin: 0 auto;
-  border-radius: 12px;
-  overflow: hidden;
+/* ========================= /
+/ MAP /
+/ ========================= */
+
+.map-container {
+position: relative;
+max-width: 900px;
+margin: 0 auto;
+border-radius: 12px;
+overflow: hidden;
 }
 
-/* Make the image define the box */
-.map-container img{
-  display: block;
-  width: 100%;
-  height: auto;
+/* Image defines sizing */
+#worldMap {
+display: block;
+width: 100%;
+height: auto;
 }
 
-/* Overlay sits exactly on top of the image */
-.map-overlay{
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
+/* Overlay sits exactly on top */
+.map-overlay {
+position: absolute;
+inset: 0;
+pointer-events: none;
 }
 
-/* Markers */
-.marker{
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  background: #39ffb1;
-  box-shadow: 0 0 0 4px rgba(57,255,177,0.18);
-  transform: translate(-50%, -50%);
-  pointer-events: auto;
-  cursor: pointer;
-}
-
-/* Tooltip positioned inside the map */
-.map-tooltip{
-  position: absolute;
-  display: none;
-  max-width: 260px;
-  padding: 10px 12px;
-  border-radius: 10px;
-  background: rgba(10,14,22,0.95);
-  border: 1px solid rgba(255,255,255,0.12);
-  color: #fff;
-  font-size: 13px;
-  line-height: 1.35;
-  pointer-events: none;
-}
-
-
-/* Markers and tooltip */
+/* Marker */
 .marker {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  background: var(--success);
-  border: 2px solid rgba(255, 255, 255, 0.55);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
-  box-shadow: 0 0 0 6px rgba(43, 213, 118, 0.12);
+position: absolute;
+width: 12px;
+height: 12px;
+border-radius: 50%;
+background: var(--success);
+border: 2px solid rgba(255, 255, 255, 0.6);
+box-shadow: 0 0 0 6px rgba(43, 213, 118, 0.12);
+transform: translate(-50%, -50%);
+pointer-events: auto;
+cursor: pointer;
+transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.tooltip {
-  position: absolute;
-  background: rgba(12, 16, 25, 0.92);
-  color: var(--text);
-  padding: 10px 12px;
-  border-radius: 12px;
-  display: none;
-  z-index: 10;
-  max-width: 260px;
-  pointer-events: none;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
+.marker:hover {
+transform: translate(-50%, -50%) scale(1.2);
+box-shadow: 0 0 0 8px rgba(43, 213, 118, 0.18);
 }
 
-.tooltip p {
-  color: var(--muted);
+/* Tooltip */
+.map-tooltip {
+position: absolute;
+display: none;
+max-width: 260px;
+padding: 10px 12px;
+border-radius: 12px;
+background: rgba(12, 16, 25, 0.95);
+border: 1px solid var(--border);
+color: var(--text);
+font-size: 13px;
+line-height: 1.35;
+pointer-events: none;
+box-shadow: var(--shadow);
+z-index: 5;
 }
 
 /* Chart container */
