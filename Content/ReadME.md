@@ -1,5 +1,5 @@
 # Andrew Ibsen | Aircraft Maintenance Leader  
-![British Airways 787](assets/images/B787.jpg)
+![Digital Aviation Transformation](../assets/images/Davinci_AI_Aviation.png)
 
 ---
 
