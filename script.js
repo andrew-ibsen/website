@@ -46,11 +46,11 @@ function initMapMarkers() {
   if (!mapContainer || !mapImg || !overlay || !tooltip) return;
 
   const locations = [
-    { name: 'New York (JFK)', description: 'Duty Maintenance Manager at BA Engineering JFK.', x: 0.27, y: 0.38 },
-    { name: 'London (LHR)', description: 'Performance Recovery Team operations at LHR.', x: 0.45, y: 0.30 },
-    { name: 'Reykjavik (KEF)', description: 'Icelandair line and base maintenance.', x: 0.42, y: 0.25 },
-    { name: 'Geneva (GVA)', description: 'Home base.', x: 0.47, y: 0.33 },
-    { name: 'Florida', description: 'Family base.', x: 0.30, y: 0.48 }
+    { name: 'New York (JFK)', description: 'Base', x: 0.27, y: 0.38 },
+    { name: 'London (LHR)', description: 'Base', x: 0.45, y: 0.30 },
+    { name: 'Reykjavik (KEF)', description: 'Base', x: 0.42, y: 0.25 },
+    { name: 'Geneva (GVA)', description: 'Base.', x: 0.47, y: 0.33 },
+    { name: 'Florida', description: 'Base', x: 0.30, y: 0.48 }
   ];
 
   function renderMarkers() {
