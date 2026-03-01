@@ -1,5 +1,5 @@
 # Andrew Ibsen | Aircraft Maintenance Leader  
-![Digital Aviation Transformation](../assets/images/Davinci_AI_Aviation.png)
+![Digital Aviation Transformation](assets/images/Davinci_AI_Aviation.png)
 
 ---
 
