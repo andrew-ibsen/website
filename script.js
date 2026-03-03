@@ -51,7 +51,7 @@ function initMapMarkers() {
     { name: 'Reykjavik (KEF)', description: 'Base', x: 0.42, y: 0.25 },
     { name: 'Geneva (GVA)', description: 'Base', x: 0.47, y: 0.33 },
     { name: 'Florida (MCO)', description: 'Base', x: 0.30, y: 0.48 },
-    { name: 'Rio de Janeiro (GIG)', description: 'Base', x: 0.30, y: 0.22 }
+    { name: 'Rio de Janeiro (GIG)', description: 'Base', x: 0.30, y: 0.70 }
   ];
 
   function render() {
