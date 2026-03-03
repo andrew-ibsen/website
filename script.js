@@ -50,42 +50,48 @@ function initMapMarkers() {
     { name: 'London (LHR)', description: 'Base', x: 0.45, y: 0.30 },
     { name: 'Reykjavik (KEF)', description: 'Base', x: 0.42, y: 0.25 },
     { name: 'Geneva (GVA)', description: 'Base', x: 0.47, y: 0.33 },
-    { name: 'Florida (MCO)', description: 'Base', x: 0.30, y: 0.48 }
+    { name: 'Florida (MCO)', description: 'Base', x: 0.30, y: 0.48 },
     { name: 'Rio de Janeiro (GIG)', description: 'Base', x: 0.30, y: 0.22 }
   ];
 
-  function renderMarkers() {
-    overlay.innerHTML = '';
+  function render() {
+    overlay.innerHTML = "";
+    tooltip.style.display = "none";
 
-    locations.forEach(loc => {
-      const marker = document.createElement('div');
-      marker.className = 'marker';
-      marker.style.left = (loc.x * 100) + '%';
-      marker.style.top = (loc.y * 100) + '%';
+    locations.forEach((loc) => {
+      const marker = document.createElement("div");
+      marker.className = "marker";
 
-      marker.addEventListener('mouseenter', () => {
-        tooltip.style.display = 'block';
-        tooltip.innerHTML = '<strong>' + loc.name + '</strong><br>' + loc.description;
+      const xPct = (loc.x * 100).toFixed(2) + "%";
+      const yPct = (loc.y * 100).toFixed(2) + "%";
 
-        const rect = overlay.getBoundingClientRect();
-        tooltip.style.left = (loc.x * rect.width + 14) + 'px';
-        tooltip.style.top = (loc.y * rect.height + 14) + 'px';
+      marker.style.left = xPct;
+      marker.style.top = yPct;
+
+      marker.addEventListener("mouseenter", () => {
+        tooltip.style.display = "block";
+        tooltip.textContent = loc.name + " " + loc.description;
+
+        const m = marker.getBoundingClientRect();
+        const c = mapContainer.getBoundingClientRect();
+
+        tooltip.style.left = (m.left - c.left + 14) + "px";
+        tooltip.style.top = (m.top - c.top + 14) + "px";
       });
 
-      marker.addEventListener('mouseleave', () => {
-        tooltip.style.display = 'none';
+      marker.addEventListener("mouseleave", () => {
+        tooltip.style.display = "none";
       });
 
       overlay.appendChild(marker);
     });
   }
 
-  if (mapImg.complete) renderMarkers();
-  mapImg.addEventListener('load', renderMarkers);
-  window.addEventListener('resize', () => tooltip.style.display = 'none');
-}
+  if (mapImg.complete) render();
+  else mapImg.addEventListener("load", render);
 
-document.addEventListener('DOMContentLoaded', initMapMarkers);
+  window.addEventListener("resize", render);
+}
 
 
 // Revenue bar chart initialization
