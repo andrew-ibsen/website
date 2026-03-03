@@ -43,7 +43,7 @@ Explore Engineering → https://andrewibsen.com/engineer.html
 - EASA, UK CAA Part-66 B1.1  
 - FAA Airframe & Powerplant  
 - Type Ratings: A330, B777, B787, B757  
-- AMOS, ULTRAMAIN, SAP  
+- AMOS, ULTRAMAIN, SAP, IFS (Maintenix), MRO-PRO  
 - AOG recovery leadership  
 - Part 145 and CAMO compliance  
 - Performance Recovery Team (LHR)
