@@ -47,12 +47,12 @@ function initMapMarkers() {
   if (!mapContainer || !mapImg || !overlay || !tooltip) return;
 
   const locations = [
-  { name: 'New York (JFK)', description: 'Base', x: 0.285, y: 0.400 },
-  { name: 'London (LHR)', description: 'Base', x: 0.465, y: 0.315 },
-  { name: 'Geneva (GVA)', description: 'Base', x: 0.475, y: 0.345 },
-  { name: 'Reykjavik (KEF)', description: 'Base', x: 0.425, y: 0.255 },
-  { name: 'Orlando (MCO)', description: 'Base', x: 0.295, y: 0.515 },
-  { name: 'Rio de Janeiro (GIG)', description: 'Base', x: 0.390, y: 0.690 }
+  { name: 'New York (JFK)', description: 'Base', x: 0.272, y: 0.395 },
+  { name: 'London (LHR)', description: 'Base', x: 0.455, y: 0.318 },
+  { name: 'Geneva (GVA)', description: 'Base', x: 0.462, y: 0.352 },
+  { name: 'Reykjavik (KEF)', description: 'Base', x: 0.418, y: 0.252 },
+  { name: 'Orlando (MCO)', description: 'Base', x: 0.288, y: 0.515 },
+  { name: 'Rio de Janeiro (GIG)', description: 'Base', x: 0.375, y: 0.692 }
 ];
 
   function render() {
