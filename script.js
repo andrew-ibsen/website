@@ -38,6 +38,7 @@ function animateCounters() {
 }
 
 // Map marker initialization
+/* Map marker initialization */
 function initMapMarkers() {
   const mapContainer = document.getElementById('mapContainer');
   const mapImg = document.getElementById('worldMap');
@@ -46,12 +47,12 @@ function initMapMarkers() {
   if (!mapContainer || !mapImg || !overlay || !tooltip) return;
 
   const locations = [
-    { name: 'New York (JFK)', description: 'Base', x: 0.27, y: 0.38 },
-    { name: 'London (LHR)', description: 'Base', x: 0.45, y: 0.30 },
-    { name: 'Reykjavik (KEF)', description: 'Base', x: 0.42, y: 0.25 },
-    { name: 'Geneva (GVA)', description: 'Base', x: 0.47, y: 0.33 },
-    { name: 'Florida (MCO)', description: 'Base', x: 0.30, y: 0.48 },
-    { name: 'Rio de Janeiro (GIG)', description: 'Base', x: 0.30, y: 0.70 }
+    { name: 'New York (JFK)', description: 'Base', x: 0.29, y: 0.38 },
+    { name: 'London (LHR)', description: 'Base', x: 0.47, y: 0.30 },
+    { name: 'Geneva (GVA)', description: 'Base', x: 0.48, y: 0.33 },
+    { name: 'Reykjavik (KEF)', description: 'Base', x: 0.43, y: 0.24 },
+    { name: 'Orlando (MCO)', description: 'Base', x: 0.30, y: 0.49 },
+    { name: 'Rio de Janeiro (GIG)', description: 'Base', x: 0.37, y: 0.66 }
   ];
 
   function render() {
@@ -92,8 +93,6 @@ function initMapMarkers() {
 
   window.addEventListener("resize", render);
 }
-
-
 // Revenue bar chart initialization
 function initRevenueChart() {
   const canvas = document.getElementById('revenueChart');
