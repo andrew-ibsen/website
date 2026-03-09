@@ -46,14 +46,15 @@ function initMapMarkers() {
   const tooltip = document.getElementById('mapTooltip');
   if (!mapContainer || !mapImg || !overlay || !tooltip) return;
 
+  // Tuned for the current world map image projection in this site.
   const locations = [
-  { name: 'New York (JFK)', description: 'Base', x: 0.272, y: 0.395 },
-  { name: 'London (LHR)', description: 'Base', x: 0.455, y: 0.318 },
-  { name: 'Geneva (GVA)', description: 'Base', x: 0.462, y: 0.352 },
-  { name: 'Reykjavik (KEF)', description: 'Base', x: 0.418, y: 0.252 },
-  { name: 'Orlando (MCO)', description: 'Base', x: 0.288, y: 0.515 },
-  { name: 'Rio de Janeiro (GIG)', description: 'Base', x: 0.375, y: 0.692 }
-];
+    { name: 'New York (JFK)', description: 'Base', x: 0.245, y: 0.355 },
+    { name: 'London (LHR)', description: 'Base', x: 0.468, y: 0.298 },
+    { name: 'Geneva (GVA)', description: 'Base', x: 0.480, y: 0.338 },
+    { name: 'Reykjavik (KEF)', description: 'Base', x: 0.430, y: 0.235 },
+    { name: 'Orlando (MCO)', description: 'Base', x: 0.266, y: 0.435 },
+    { name: 'Rio de Janeiro (GIG)', description: 'Base', x: 0.340, y: 0.625 }
+  ];
 
   function render() {
     overlay.innerHTML = "";
@@ -71,7 +72,7 @@ function initMapMarkers() {
 
       marker.addEventListener("mouseenter", () => {
         tooltip.style.display = "block";
-        tooltip.textContent = loc.name + " " + loc.description;
+        tooltip.textContent = `${loc.name} — ${loc.description}`;
 
         const m = marker.getBoundingClientRect();
         const c = mapContainer.getBoundingClientRect();
