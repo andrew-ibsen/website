@@ -4,65 +4,115 @@
 <meta charset="utf-8"/>
 <title>Line Maintenance Operational Dashboard - Case Study</title>
 <style>
-  @page { size: A4; margin: 18mm; }
-  body { font-family: Arial, Helvetica, sans-serif; color:#111; line-height:1.35; font-size:11pt; }
-  h1 { font-size:20pt; margin:0 0 6px; }
+  @page { size: A4; margin: 16mm; }
+  body { font-family: Arial, Helvetica, sans-serif; color:#111; line-height:1.35; font-size:10.8pt; }
+  h1 { font-size:20pt; margin:0 0 4px; }
   h2 { font-size:13pt; margin:14px 0 6px; border-bottom:1px solid #ddd; padding-bottom:3px; }
-  p, li { font-size:10.8pt; }
+  h3 { font-size:11.5pt; margin:10px 0 4px; }
+  p, li { font-size:10.6pt; }
   .muted{ color:#444; }
-  ul{ margin:6px 0 10px 18px; }
+  ul{ margin:5px 0 10px 18px; }
   .shot{ margin:10px 0 14px; }
   .shot img{ width:100%; border:1px solid #ccc; border-radius:6px; }
-  .caption{ font-size:9.5pt; color:#444; margin-top:4px; }
+  .caption{ font-size:9.4pt; color:#444; margin-top:4px; }
   .link{ word-break:break-all; }
+  .kpi { background:#f7f9fc; border:1px solid #dbe3f1; border-radius:8px; padding:8px 10px; margin:8px 0; }
 </style>
 </head>
 <body>
   <h1>Line Maintenance Operational Dashboard</h1>
   <p class="muted"><b>Live app:</b> <span class="link">https://jfk-ops-live-dashboard-vercel-mirro.vercel.app/</span></p>
 
-  <h2>Overview</h2>
+  <h2>Executive Summary</h2>
   <p>
-    The Line Maintenance Operational Dashboard is a low-code, highly tailorable web app designed to support daily line maintenance execution,
-    resource allocation, and shift-level decision making. It gives engineers and managers one live operational view that combines daily roster context,
-    live flight activity, weather visibility, and assignment control.
+    The Line Maintenance Operational Dashboard is a low-code, station-tailorable web application that brings daily roster planning,
+    live operational visibility, weather awareness, and resource assignment into one execution surface. It was designed for practical
+    line maintenance decision-making under time pressure, where fragmented systems and static reports often create delays and coordination gaps.
   </p>
 
-  <h2>What it does</h2>
+  <div class="kpi">
+    <b>Core value:</b> one operational board for engineers and managers to plan, execute, and rebalance workload in real time.
+  </div>
+
+  <h2>Problem Statement</h2>
   <ul>
-    <li><b>Daily Roster CSV Upload:</b> imports station activity and creates a practical operational board for the day.</li>
-    <li><b>Interpretative ingestion logic:</b> intelligently parses roster content and proposes assignment mappings, improving compatibility across different roster formats.</li>
-    <li><b>Real-time dashboard access:</b> engineers can view the operational picture on the go (flight rows, status, gate, reg/type where available).</li>
-    <li><b>Live weather panel:</b> station weather now/AM/PM/EVE with precipitation to support tactical planning.</li>
-    <li><b>Resource assignment layer:</b> certifier/mechanic assignment controls with quick edit and reset behaviors for fast replanning.</li>
-    <li><b>Gantt operations view:</b> managers can see the day timeline, overlapping workload, and peak periods at a glance.</li>
-    <li><b>Heat-map style demand insight:</b> highlights busy intervals to support staffing and shift pacing decisions.</li>
+    <li>Daily roster files vary by station and format, making consistent interpretation difficult.</li>
+    <li>Assignment coordination between certifiers and mechanics is often manual and time-sensitive.</li>
+    <li>Operational context (weather, live movement, timeline congestion) is spread across multiple tools.</li>
+    <li>Managers need fast visibility of peak workload windows to avoid resource bottlenecks.</li>
   </ul>
 
-  <h2>Enrichment & resilience layers</h2>
+  <h2>Solution Design</h2>
+  <h3>1) Interpretative roster ingestion</h3>
+  <p>
+    A Daily Roster CSV upload module acts as the baseline input layer. The ingestion logic interprets roster content and transposes
+    it into a structured operational board, including flight lines and assignment-ready records. This enables compatibility with
+    varying station roster layouts and reduces setup friction.
+  </p>
+
+  <h3>2) Live execution board</h3>
   <ul>
-    <li>Flight enrichment stack designed with fallback behavior (provider + cache + manual overrides).</li>
-    <li>A/C registration and type population can be sourced from live/enrichment layers where available.</li>
-    <li>DOC8643 type normalization support helps standardize aircraft type values into cleaner outputs.</li>
-    <li>Manual column edits remain available for operational control when feeds are incomplete.</li>
+    <li>Flight list with status, A/C registration, A/C type, terminal/gate, ETA/STD, and notes.</li>
+    <li>Editable assignment columns for certifier/mechanic with rapid operational updates.</li>
+    <li>Column-level reset controls for quick board hygiene during dynamic changes.</li>
+    <li>Station weather tile (current + day-part outlook) for tactical awareness.</li>
   </ul>
 
-  <h2>Why this is valuable</h2>
+  <h3>3) Manager analytics view</h3>
   <ul>
-    <li><b>Resource management:</b> aligns people, flights, and constraints in one execution surface.</li>
-    <li><b>Faster decisions:</b> combines planning data and live cues into a single operational picture.</li>
-    <li><b>Station versatility:</b> adaptable by station and process maturity without expensive enterprise customization.</li>
-    <li><b>Low-cost deployment:</b> built as a practical low-code web application with minimal overhead.</li>
+    <li>24-hour Gantt timeline for flight overlap and sequencing visibility.</li>
+    <li>Heat-map intensity overlay to identify peak workload periods.</li>
+    <li>Supports staffing rebalance decisions and shift handover quality.</li>
+  </ul>
+
+  <h2>Enrichment & Data Resilience</h2>
+  <p>
+    The dashboard uses a layered enrichment architecture to reduce single-source dependency and maintain operational continuity.
+  </p>
+  <ul>
+    <li><b>Primary/secondary feed strategy:</b> modular provider routing with fallback handling.</li>
+    <li><b>Cache layer:</b> retains last-known useful values to reduce blank operational fields.</li>
+    <li><b>Manual override layer:</b> allows frontline correction where external feeds are incomplete.</li>
+    <li><b>Type normalization:</b> DOC8643-based aircraft type mapping to cleaner, standardized outputs.</li>
+  </ul>
+
+  <h2>Key Capabilities</h2>
+  <ul>
+    <li>Rapid daily deployment from CSV input to actionable roster board.</li>
+    <li>Resource assignment controls with practical reset and correction workflows.</li>
+    <li>Real-time weather + operational context in one interface.</li>
+    <li>Timeline and peak-demand visibility for management decisions.</li>
+    <li>Low-code architecture, easy to tailor by station without high licensing overhead.</li>
+  </ul>
+
+  <h2>Practical Use Cases</h2>
+  <ul>
+    <li><b>Shift startup:</b> load roster and publish a consistent board view in minutes.</li>
+    <li><b>In-day disruption handling:</b> quickly reassign certifier/mechanic resources.</li>
+    <li><b>Handover quality:</b> preserve notes, assignment intent, and timeline clarity.</li>
+    <li><b>Peak-time planning:</b> use heat-map/Gantt to pre-position capability before congestion windows.</li>
+    <li><b>Multi-station scaling:</b> replicate core app while tailoring parser and assignment defaults locally.</li>
+  </ul>
+
+  <h2>Why this approach works</h2>
+  <ul>
+    <li><b>Operationally native:</b> built around line maintenance workflows, not generic project tooling.</li>
+    <li><b>Flexible input model:</b> adaptable to real-world roster variability.</li>
+    <li><b>Low-cost execution:</b> web-first, lightweight, and easy to maintain.</li>
+    <li><b>Human-in-the-loop by design:</b> automation accelerates decisions, while engineers/managers keep control.</li>
   </ul>
 
   <h2>Screenshots</h2>
   <div class="shot">
     <img src="../images/projects/lineops-dashboard-main.jpg" alt="Line Maintenance Dashboard main view" />
-    <div class="caption">Figure 1: Daily roster board with assignment columns, live statuses, and editable operational controls.</div>
+    <div class="caption">Figure 1: Daily roster execution board. Editable assignment columns, operational status, and structured flight line view for shift control.</div>
   </div>
   <div class="shot">
     <img src="../images/projects/lineops-dashboard-live.jpg" alt="Line Maintenance Dashboard live status view" />
-    <div class="caption">Figure 2: Live ops context showing weather module, feed health, and roster execution status.</div>
+    <div class="caption">Figure 2: Live context panel showing weather, feed health, and active board state for tactical decision-making.</div>
   </div>
+
+  <h2>Access</h2>
+  <p><b>Live link:</b> <span class="link">https://jfk-ops-live-dashboard-vercel-mirro.vercel.app/</span></p>
 </body>
 </html>
