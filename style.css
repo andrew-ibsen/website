@@ -360,6 +360,22 @@ main p {
   color: var(--muted);
 }
 
+.project-cta-wrap { margin-top: 12px; }
+.project-cta {
+  display: inline-block;
+  background: linear-gradient(180deg, rgba(47, 109, 246, 0.95), rgba(30, 79, 214, 0.95));
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  text-decoration: none !important;
+  transition: transform 0.12s, filter 0.12s, background 0.12s;
+}
+.project-cta:hover { filter: brightness(1.06); transform: translateY(-1px); text-decoration: none !important; }
+.project-cta:active { transform: translateY(0); }
+
 /* ========================= /
 / MAP /
 / ========================= */
