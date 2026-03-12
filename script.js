@@ -46,15 +46,22 @@ function initMapMarkers() {
   const tooltip = document.getElementById('mapTooltip');
   if (!mapContainer || !mapImg || !overlay || !tooltip) return;
 
-  // Tuned for the current world map image projection in this site.
+  // Pin locations by true geo coordinates (lon/lat) then projected to map.
   const locations = [
-    { name: 'New York (JFK)', description: 'Base', x: 0.245, y: 0.355 },
-    { name: 'London (LHR)', description: 'Base', x: 0.468, y: 0.298 },
-    { name: 'Geneva (GVA)', description: 'Base', x: 0.480, y: 0.338 },
-    { name: 'Reykjavik (KEF)', description: 'Base', x: 0.430, y: 0.235 },
-    { name: 'Orlando (MCO)', description: 'Base', x: 0.266, y: 0.435 },
-    { name: 'Rio de Janeiro (GIG)', description: 'Base', x: 0.340, y: 0.625 }
+    { name: 'New York (JFK)', description: 'Base', lon: -73.7781, lat: 40.6413 },
+    { name: 'London (LHR)', description: 'Base', lon: -0.4543, lat: 51.4700 },
+    { name: 'Geneva (GVA)', description: 'Base', lon: 6.1089, lat: 46.2381 },
+    { name: 'Reykjavík (KEF)', description: 'Base', lon: -22.6056, lat: 63.9850 },
+    { name: 'Orlando (MCO)', description: 'Base', lon: -81.3089, lat: 28.4312 },
+    { name: 'Rio de Janeiro (GIG)', description: 'Base', lon: -43.2506, lat: -22.8090 }
   ];
+
+  const toX = (lon) => (lon + 180) / 360;
+  const toY = (lat) => {
+    const clamped = Math.max(-85, Math.min(85, lat));
+    const rad = (clamped * Math.PI) / 180;
+    return (1 - Math.log(Math.tan(Math.PI / 4 + rad / 2)) / Math.PI) / 2;
+  };
 
   function render() {
     overlay.innerHTML = "";
@@ -64,8 +71,8 @@ function initMapMarkers() {
       const marker = document.createElement("div");
       marker.className = "marker";
 
-      const xPct = (loc.x * 100).toFixed(2) + "%";
-      const yPct = (loc.y * 100).toFixed(2) + "%";
+      const xPct = (toX(loc.lon) * 100).toFixed(2) + "%";
+      const yPct = (toY(loc.lat) * 100).toFixed(2) + "%";
 
       marker.style.left = xPct;
       marker.style.top = yPct;
