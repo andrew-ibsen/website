@@ -32,24 +32,36 @@
   </nav>
   <main>
     <section>
-      <h2>Driving Digital Transformation</h2>
-      <p>Andrew designs and delivers innovative digital solutions that transform operations and create measurable business value. His projects span custom app development, global software rollouts, analytics dashboards, and workflow automation, all grounded in data-driven decision making and change management best practices.</p>
+      <h2>Technical Management Capabilities</h2>
+      <ul>
+        <li><strong>Multi-Fleet Technical Oversight:</strong> Operational governance across <strong>A320, A330, A350, B777, and B787</strong> environments with safety- and compliance-first execution.</li>
+        <li><strong>Regulatory & Customer Assurance:</strong> Strong audit outcomes across <strong>EASA, UK CAA, JCAB, CASA, and New Zealand CAA</strong> requirements, plus airline customer frameworks including <strong>Iberia, Aer Lingus, ANA, JAL, Qantas, Finnair, Air New Zealand, and Norse Atlantic</strong>.</li>
+        <li><strong>People Leadership:</strong> Coaching, training, and capability-building to maintain standards under high-tempo line operations, with a strong focus on empowerment through clear accountability, decision ownership, and continuous development.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Operating Philosophy</h2>
+      <p>Technical leadership is most effective when engineering discipline, commercial logic, and human leadership are integrated as one operating system.</p>
+      <p>I lead by empowerment: setting clear standards, delegating authority to the right level, and building teams that own decisions in real time. In high-tempo line operations, this creates faster and safer execution, stronger accountability at the frontline, and more predictable operational and commercial outcomes.</p>
     </section>
 
     <section id="tech-metrics">
-      <h2>Transformation Metrics</h2>
+      <h2>Transformation Metrics (2023–Present)</h2>
       <div class="metrics">
-        <div class="metric"><span class="counter" data-target="2000">0</span><p>Users on ERP</p></div>
-        <div class="metric"><span class="counter" data-target="200">0</span><p>Users on Storeskeeper App</p></div>
-        <div class="metric"><span class="counter" data-target="1500">0</span><p>Users in BA ID Digitization</p></div>
-        <div class="metric"><span class="counter" data-target="5">0</span><p>Airlines using custom solutions</p></div>
-        <div class="metric"><span class="counter" data-target="30">0%</span><p>Revenue increase</p></div>
-        <div class="metric"><span class="counter" data-target="500">0%</span><p>Efficiency gain</p></div>
+        <div class="metric"><span class="counter" data-target="2000">0</span><p>ERP users enabled</p></div>
+        <div class="metric"><span class="counter" data-target="200">0</span><p>Storeskeeper users enabled</p></div>
+        <div class="metric"><span class="counter" data-target="1500">0</span><p>BA ID digitization users</p></div>
+        <div class="metric"><span class="counter" data-target="8">0</span><p>Airline customer frameworks supported</p></div>
+        <div class="metric"><span class="counter" data-target="30">0%</span><p>Revenue uplift (reported)</p></div>
+        <div class="metric"><span class="counter" data-target="500">0%</span><p>Process efficiency gain (reported)</p></div>
       </div>
+      <p><em>2023 to present shown as actuals; next 3 years presented separately as projections based on active implementation pipeline and adoption assumptions.</em></p>
     </section>
-        <section id="charts">
+    <section id="charts">
       <h2>Transformation Impact</h2>
       <canvas id="revenueChart"></canvas>
+      <p><em>Chart convention: 2023–current = actuals, next 3 years = projected.</em></p>
     </section>
     <section>
       <h2>Major Digital Projects</h2>
@@ -112,19 +124,19 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-      const canvas = document.getElementById('techChart');
+      const canvas = document.getElementById('revenueChart');
       if (!canvas) return;
 
-      const labels = ['ERP','Storeskeeper','BA ID','Dashboards','Workflows'];
-      const values = [500, 300, 200, 100, 50];
-      const colors = ['#0078D4','#107C10','#FFB900','#003087','#0078D4'];
+      const labels = ['2023','2024','2025','2026 (P)','2027 (P)','2028 (P)'];
+      const values = [1.2, 1.8, 2.4, 2.9, 3.3, 3.8];
+      const colors = ['#0078D4','#0078D4','#0078D4','#FFB900','#FFB900','#FFB900'];
 
       sizeCanvasToCSS(canvas);
-      drawBarChart('techChart', labels, values, colors);
+      drawBarChart('revenueChart', labels, values, colors);
 
       window.addEventListener('resize', () => {
         sizeCanvasToCSS(canvas);
-        drawBarChart('techChart', labels, values, colors);
+        drawBarChart('revenueChart', labels, values, colors);
       });
     });
   </script>

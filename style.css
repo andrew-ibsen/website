@@ -204,7 +204,11 @@ background-size: contain;
 }
 
 .hero-icelandair img {
-  object-position: center 35%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
+  transform: scale(1);
 }
 
 /* LinkedIn */
